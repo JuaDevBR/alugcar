@@ -1,0 +1,46 @@
+[
+    {
+        "id":1,
+        "nome":"Toyota Corolla",
+        "marca":"Sedan Medio",
+        "preco":"R$ 93:00",     
+        "diaria":"01",      
+        "total":"R$ 93:00",
+        "cambio":"Automático",
+        "mala":"460 Litros",
+        "imagemCarro": "/public/images/corolla.png"
+    },
+    {
+        "id":2,
+        "nome":"GM Onix",
+        "marca":"Hatch Médio",
+        "preco":"R$ 77:00",     
+        "diaria":"01",      
+        "total":"R$ 77:00",
+        "cambio":"Manual",
+        "mala":"320 Litros",
+        "imagemCarro": "/public/images/onix.png"
+    },
+    {
+        "id":3,
+        "nome":"Fiat Mobi",
+        "marca":"Hatch Compacto",
+        "preco":"R$ 56:00",     
+        "diaria":"01",      
+        "total":"R$ 56:00",
+        "cambio":"Manual",
+        "mala":"120 Litros",
+        "imagemCarro": "/public/images/mobi.png"
+    },
+    {
+        "id":4,
+        "nome":"VW Nivus",
+        "marca":"SUV",
+        "preco":"R$ 122:00",     
+        "diaria":"01",      
+        "total":"R$ 122:00",
+        "cambio":"Automático",
+        "mala":"460 Litros",
+        "imagemCarro": "/public/images/Nivus.png"
+    }
+]

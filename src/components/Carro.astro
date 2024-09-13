@@ -1,38 +1,92 @@
----
+--- 
 import Image from "astro/components/Image.astro";
 
-import ImgCarro from "/public/images/corolla.png"
+import ImgCarro1 from "/public/images/corolla.png"
+import ImgMalas from "/public/images/icone-malas.svg"
+import ImgTrans from "/public/images/icone-transmissao.svg"
+
+import carros from "./data/carros.json"
+
+
 
 ---
-<div>
-    <div class="foto">
-        <Image src={ImgCarro} alt="Toyota Corrola" />
+
+    { carros.map(
+        (carro) =>(
+        <div class="container mb-6 ">
+    <div class="foto ml-6">
+        <Image src={ImgCarro1} alt={carro.nome} />
     </div>
-    <div class="conteudo">
-        <div class="cima">
+    <div class="conteudo -mt-40">
+        <div class="cima flex flex-row justify-around">
             <div class="nome-carro">
-                <h3>Toyota Corolla</h3>
-                <p>Sedan Medio</p>
+                <h4 class="font-semibold">{carro.nome}</h4>
+                <p>{carro.marca}</p>
             </div>
             <div class="valor-diario">
-                <h4>R$ 93,00</h4>
+                <h4 class="font-semibold">{carro.preco}</h4>
                 <p>valor diário</p>
             </div>
             <div class="diarias">
-                <h4>01</h4>
+                <h4 class="font-semibold">{carro.diaria}</h4>
                 <p>dia(s)</p>
             </div>
             <div class="valor-total">
-                <h4>R$ 93,00</h4>
+                <h4 class="font-semibold">{carro.total}</h4>
                 <p>Valor total</p>
             </div>
         </div>
-        <div class="baixo">
-            
+        <div class="baixo flex flex-row mt-14">
+            <div class="cambio ml-6 pb-5">
+                <Image src={ImgTrans} alt="Cambio" />
+                <p class="pl-1">{carro.cambio}</p>
+            </div>
+            <div class="porta-malas ml-7 pb-5 ">
+                <Image src={ImgMalas} alt="Porta-malas" />
+                <p class="pl-1">{carro.mala}</p>
+            </div>
+            <div class="button-reseva ml-44 font-semibold -mt-6 pt-3">
+                <button>Reservar</button>
+            </div>
         </div>
     </div>
 </div>
+        )
+    ) }
+
 
 <style>
+   .container{
+    background-color: var(--colorWhite);
+    border-radius: 8px;
+   }
 
+   .conteudo{
+    margin-left: 274px;
+   }
+   .cima h4{
+    font-size: 24px;
+    color: var(--colorDarkBlue);
+   }
+   .cima p{
+    font-size: 16px;
+    color: var(--colorGray);
+   }
+
+   .baixo p{
+    color: var(--colorGray);
+   }
+   .cambio, .porta-malas {
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+   }
+
+   button{
+    color: var(--colorDarkBlue);
+    background-color: var(--colorYellow);
+    border-radius: 4px;
+    padding: 10px 40px;
+    font-size: 16px;
+   }
 </style>
